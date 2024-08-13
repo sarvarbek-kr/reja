@@ -18,13 +18,15 @@ app.set("view engine", "ejs");   /// ejs orqali (html) yani froont endni yasemiz
 
 
 // 4. Routing code
+app.post("/create-item", (req, res) => {
+    console.log(req.body);
+    res.json({ test: "succes"});
+})
 
-app.get('/hello', function (req, res){
-    res.end(`<h1 style="background:red">Hello World by Walter</h1>`);
+app.get('/', function (req, res ) {
+    res.render("harid");
 });
-app.get('/gift', function (req, res){
-    res.end(`<h1>Siz sovg'alar pagidasiz</h1>`);
-});
+
 
 const server = http.createServer(app);
 let PORT = 3000;
