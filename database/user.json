@@ -1,0 +1,20 @@
+{
+    "name": "Walter",
+    "profession": "Software Engineer",
+    "age":24,
+    "residence": "Uzbekistan",
+    "address": "S.Korea, Cheonan",
+    "languages": ["Uzbek", "English", "Korean"],
+    "skills": ["HTML", "Css", "Js", "Node.Js", "Python"],
+    "extra_skills": ["Bootstrap Materialize", "styling", "Sass", "Django", "Flask", "GIT Knowledge"],
+    "work_place": "IT Company",
+    "service_desc": " hdgfskjdhgfsjkdgf hskjdgfjhgdsfhj khjfg hjksdfg  shkjdfg hjksgdf h khjdsfg jkhdsg jhkskjdgf",
+    "about_me": "hfjksdhfljk hjkflhksjk kkdfhlkh jkhf kljhfjkhgljk hjkfdlshg ksjhdg lkfdhg lkdhgsf",
+    "city": "Shurchi",
+    "title": ["Flask","Django", "dsslkdjf" ],
+    "flower_desc": ["what is a Flawor?", "what is a seedling?", "who is garden?"],
+    "flower_name": ["Tulip", "Daffodil", "Poppy", "Sunflower", "Bluebell"],
+    "flower_price": ["15$", "25$", "12$", "33$", "32$"],
+    "famous_words": ["World is beautiful with Flowers"],
+    "famous_name": ["Elon Musk"]
+}
