@@ -1,1 +1,221 @@
-<div>heladkjfk;ladhfkajdhkasjhkjasdfhaskjfh</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <title>Portfolio</title>
+
+</head>
+
+<body>
+    <div class="frame">
+        <div class="main_frame">
+            <div class="left_frame">
+                <div class="left_1">
+                    <div class="left_1_1">
+                        <img src="images/profile.png" width="156px" height="142px">
+                    </div>
+                    <div class="left_1_2"><%=user.name%></div>
+                    <div class="left_1_3"><%=user.profession%></div>
+                    <div class="left_icons">
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/Vector 5.svg" class="icon-1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/Vector 1.svg" class="icon-1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/Vector 2.svg" class="icon-1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/Vector 3.svg" class="icon-1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/Vector 4.svg" class="icon-1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="icon/Vector.svg" class="icon-1">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_2">
+                    <div class="private_info">
+                        <div class="private_info_up">Age</div>
+                        <div class="private_info_down"><%=user.age%></div>
+                    </div>
+                    <div class="private_info">
+                        <div class="private_info_up">Residence</div>
+                        <div class="private_info_down"><%=user.residence%></div>
+                    </div>
+                    <div class="private_info">
+                        <div class="private_info_up">Freelance</div>
+                        <div class="private_info_down"><div class="green_available">Available</div></div>
+                    </div>
+                    <div class="private_info">
+                        <div class="private_info_up">Address</div>
+                        <div class="private_info_down"><%=user.address%></div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_3">
+                    <p clas="languages_menu">Languages</p>
+                    <div class="lang_texts">
+                        <div class="lang_text"><%=user.languages[0]%></div>
+                        <div class="text_percentage">100%</div>
+                    </div>
+                    <div class="percent_frame"><div class="lang_percent_1"></div></div>
+                    <div class="lang_texts">
+                        <div class="lang_text"><%=user.languages[1]%></div>
+                        <div class="text_percentage">80%</div>
+                    </div>
+                    <div class="percent_frame"><div class="lang_percent_2"></div></div>
+                    <div class="lang_texts">
+                        <div class="lang_text"><%=user.languages[2]%></div>
+                        <div class="text_percentage">60%</div>
+                    </div>
+                    <div class="percent_frame"><div class="lang_percent_3"></div></div>
+                   
+                </div>
+                <div class="marginer"></div>
+                <div class="left_4">
+                    <p clas="skills_menu">Skills</p>
+                    <div class="skills_texts">
+                        <div class="skill_text"><%=user.skills[0]%></div>
+                        <div class="skill_percentage">90%</div>
+                    </div>
+                    <div class="percent_frame"><div class="skill_percent_1"></div></div>
+                    <div class="skills_texts">
+                        <div class="skill_text"><%=user.skills[1]%></div>
+                        <div class="skill_percentage">85%</div>
+                    </div>
+                    <div class="percent_frame"><div class="skill_percent_2"></div></div>
+                    <div class="skills_texts">
+                        <div class="skill_text"><%=user.skills[2]%></div>
+                        <div class="skill_percentage">80%</div>
+                    </div>
+                    <div class="percent_frame"><div class="skill_percent_3"></div></div>
+                    <div class="skills_texts">
+                        <div class="skill_text"><%=user.skills[3]%></div>
+                        <div class="skill_percentage">90%</div>
+                    </div>
+                    <div class="percent_frame"><div class="skill_percent_4"></div></div>
+                    <div class="skills_texts">
+                        <div class="skill_text"><%=user.skills[4]%></div>
+                        <div class="skill_percentage">90%</div>
+                    </div>
+                    <div class="percent_frame"><div class="skill_percent_5"></div></div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_5">
+                    <p class="skills_menu">Extra Skills</p>
+                    <div class="extra_skills_texts">
+                        <div class="extra_1_skills"><img src="icon/Icons.png"></div>
+                        <div class="skill_text"><%=user.extra_skills[0]%></div>
+                    </div>
+                    <div class="extra_skills_texts">
+                        <div class="extra_1_skills"><img src="icon/Icons.png"></div>
+                        <div class="skill_text"><%=user.extra_skills[1]%></div>
+                    </div>
+                    <div class="extra_skills_texts">
+                        <div class="extra_1_skills"><img src="icon/Icons.png"></div>
+                        <div class="skill_text"><%=user.extra_skills[2]%></div>
+                    </div>
+                    <div class="extra_skills_texts">
+                        <div class="extra_1_skills"><img src="icon/Icons.png"></div>
+                        <div class="skill_text"><%=user.extra_skills[3]%></div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+            </div>
+            <div class="midd_frame">
+                <div class="midd_head">
+                    <div class="intro">
+                       <p class="text_intro"><%=user.about_me%></p>
+                       <p class="text_info"><%=user.service_desc%></p>
+                       <a  class="button" >
+                        <p class="button_hire">HIRE ME <img src="icon/right_vector.svg" class="right_vector"></p>
+                       </a>
+                    </div>
+                    <img src="images/profile_full.png" class="image_full">
+
+                    <img src="icon/stars/star1.svg" class="star1">
+                    <img src="icon/stars/star2.svg" class="star2">
+                    <img src="icon/stars/green1.svg" class="green1">
+                    <img src="icon/stars/green2.svg" class="green2">
+                    <img src="icon/stars/blue.svg" class="blue">
+                    <img src="icon/stars/Rectangle_yellow.svg" class="yellow">
+                    <img src="icon/stars/poly.svg" class="poly">
+             
+
+                </div>
+                <div class="midd_body">
+                    <p class="service_head">My Services</p>
+                    <p class="service_info">Our teams follow agile software development methodologies to optimise efficiency and quality, and help you get to market faster.</p>
+                    <div class="service_up">
+                        <div class="web_view">
+                            <img src="box_images/coding.svg" alt="">
+                            <p class="subject">Web Development</p>
+                            <p class="object">Blog, E-Commerce</p>
+                        </div>
+                        <div class="web_view">
+                            <img src="box_images/illustration.svg" alt="">
+                            <p class="subject">UI/UX Design</p>
+                            <p class="object">Mobile App, Website Design</p>
+                        </div>
+                        <div class="web_view">
+                            <img src="box_images/Microphone.svg" alt="">
+                            <p class="subject">Sound Design</p>
+                            <p class="object">Voice Over, Beat Making</p>
+                        </div>
+                    </div>
+                    <div class="service_up">
+                        <div class="web_view">
+                            <img src="box_images/development.svg" alt="">
+                            <p class="subject">Game Design</p>
+                            <p class="object">Character Design, Props & Objects </p>
+                        </div>
+                        <div class="web_view">
+                            <img src="box_images/Photographer.svg" alt="">
+                            <p class="subject">Photography</p>
+                            <p class="object">Portrait, Product Photography</p>
+                        </div>
+                        <div class="web_view">
+                            <p class="subject">Advertising</p>
+                            <p class="object">brands with creative ideas that deliver results. go to find new ways in and unleash brand potential across the full marketing funnel.</p>
+                            <a href="">ORDER NOW</a>
+                        </div>  
+                    </div>
+                </div>
+            </div>    
+            <div class="right_frame">
+                <img src="icon/right/vector1.svg" class="vector1">
+                <img src="icon/right/Home.svg" class="vector3">
+                <img src="icon/right/Service.svg" class="vector2">
+                <img src="icon/right/Cv.svg" class="vector2">
+                <img src="icon/right/Portfolio.svg" class="vector2">
+                <img src="icon/right/Blog.svg" class="vector2">
+                <img src="icon/right/Contact.svg" class="vector2">
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
