@@ -23,11 +23,13 @@
 // }
 
 // console.log("passed here 0");
+
 // maslahatBering(70, (err, data) => {
 //     if (err) console.log("ERROR:", err);
 //     else {
 //         console.log(data);
 //     }
+
 // });
 // console.log("passed here 1");
 
