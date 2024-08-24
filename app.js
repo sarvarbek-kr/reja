@@ -1,6 +1,5 @@
 console.log("Web Serverni boshlash");
 const express = require("express");
-const res = require("express/lib/response")
 const app = express();
 
 
@@ -22,12 +21,32 @@ app.set("view engine", "ejs");   /// ejs orqali (html) yani froont endni yasemiz
 
 // 4. Routing code
 app.post("/create-item", (req, res) => {
-   
+    console.log("user entered / create-items");
+   const new_reja = req.body.reja;
+   db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
+    if(err) {
+        console.log(err);
+        console.log("===bu 30 line");
+        res.end("something went wrong");
+    } else {
+        res.end("successfully added");
+    }
+   });
 });
 
 app.get('/', function (req, res) {
-    res.render("reja");
+    console.log("user entered /");
+    db.collection("plans")
+    .find()
+    .toArray((err, data) => {
+        if(err) {
+            console.log(err);
+            console.log("====bu 43 line");
+            res.end("something went wrong");
+        } else {
+            res.render("reja", {items: data});
+        }
+    });
 });
 
 module.exports = app;
-
