@@ -45,7 +45,6 @@ app.get('/', function (req, res) {
     .find()
     .toArray((err, data) => {
         if(err) {
-            console.log(err);
             console.log("====bu 43 line");
             res.end("something went wrong");
         } else {

@@ -102,16 +102,44 @@
 // MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
 
 
-function countNumber(string) {
-    let count = 0;
+// function countNumber(string) {
+//     let count = 0;
     
-    for (let i = 0; i < string.length; i++) {
-        if (!isNaN(string[i]) && string[i] !== ' ') {
-            count++;
-        }
-    }
+//     for (let i = 0; i < string.length; i++) {
+//         if (!isNaN(string[i]) && string[i] !== ' ') {
+//             count++;
+//         }
+//     }
     
-    return count;
+//     return count;
+// }
+// let natija = countNumber(" Bu123strinda4taraqambor");
+// console.log("raqamlar", natija);
+
+// C-TASK: 
+
+// Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+// MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+
+
+
+
+
+
+
+ function haveSameLetters(str1, str2) {
+  // Har ikkala parametrni kichik harflarga aylantiramiz (katta-kichik harf farqlari bo'lmasligi uchun)
+  str1 = str1.toLowerCase();
+  str2 = str2.toLowerCase();
+
+  // Harflarni saralaymiz
+  let sortedStr1 = str1.split('').sort().join('');
+  let sortedStr2 = str2.split('').sort().join('');
+
+  // Ikkala matnni taqqoslaymiz
+  return sortedStr1 === sortedStr2;
 }
-let natija = countNumber(" Bu123strinda4taraqambor");
-console.log("raqamlar", natija);
+
+// Misollar
+console.log(haveSameLetters("listen", "silent")); // true
+console.log(haveSameLetters("hello", "bello")); // false
