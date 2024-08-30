@@ -157,48 +157,65 @@
 // 5ta lagmon va 2ta cola mavjud! shop.sotish('non', 3) & shop.qabul('cola', 
 //   4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
 
-class Shop {
-  constructor(olmakg, banankg, giloskg) {
-      this.products = {
-          olma: olmakg,
-          banan: banankg,
-          gilos: giloskg
-      };
-  }
+// class Shop {
+//   constructor(olmakg, banankg, giloskg) {
+//       this.products = {
+//           olma: olmakg,
+//           banan: banankg,
+//           gilos: giloskg
+//       };
+//   }
 
-  // Qoldiq methodi - mahsulotlar miqdorini qaytaradi
-  qoldiq() {
-      const time = new Date().toLocaleTimeString();
-      console.log(`Hozir ${time}da ${this.products.olma}kg olma, ${this.products.banan}kg banan va ${this.products.gilos}kg gilos mavjud!`);
-  }
+//   // Qoldiq methodi - mahsulotlar miqdorini qaytaradi
+//   qoldiq() {
+//       const time = new Date().toLocaleTimeString();
+//       console.log(`Hozir ${time}da ${this.products.olma}kg olma, ${this.products.banan}kg banan va ${this.products.gilos}kg gilos mavjud!`);
+//   }
 
-  // Sotish methodi - mahsulotlarni sotish uchun ishlatiladi
-  sotish(product, quantity) {
-      if (this.products[product] !== undefined && this.products[product] >= quantity) {
-          this.products[product] -= quantity;
-          const time = new Date().toLocaleTimeString();
-          console.log(`${time}da ${quantity}kg ${product} sotildi.`);
-      } else {
-          console.log("Sotib olish uchun yetarli mahsulot mavjud emas yoki noto'g'ri mahsulot nomi kiritildi.");
-      }
-  }
+//   // Sotish methodi - mahsulotlarni sotish uchun ishlatiladi
+//   sotish(product, quantity) {
+//       if (this.products[product] !== undefined && this.products[product] >= quantity) {
+//           this.products[product] -= quantity;
+//           const time = new Date().toLocaleTimeString();
+//           console.log(`${time}da ${quantity}kg ${product} sotildi.`);
+//       } else {
+//           console.log("Sotib olish uchun yetarli mahsulot mavjud emas yoki noto'g'ri mahsulot nomi kiritildi.");
+//       }
+//   }
 
-  // Qabul methodi - mahsulotlar qabul qilish uchun ishlatiladi
-  qabul(product, quantity) {
-      if (this.products[product] !== undefined) {
-          this.products[product] += quantity;
-          const time = new Date().toLocaleTimeString();
-          console.log(`${time}da ${quantity}kg ${product} qabul qilindi.`);
-      } else {
-          console.log("Noto'g'ri mahsulot nomi kiritildi.");
-      }
-  }
+//   // Qabul methodi - mahsulotlar qabul qilish uchun ishlatiladi
+//   qabul(product, quantity) {
+//       if (this.products[product] !== undefined) {
+//           this.products[product] += quantity;
+//           const time = new Date().toLocaleTimeString();
+//           console.log(`${time}da ${quantity}kg ${product} qabul qilindi.`);
+//       } else {
+//           console.log("Noto'g'ri mahsulot nomi kiritildi.");
+//       }
+//   }
+// }
+
+// // Klassdan foydalanish
+// const shop = new Shop(10, 15, 7); // 10kg olma, 15kg banan, 7kg gilos bilan shop yaratildi
+
+// shop.qoldiq(); // Mahsulotlar qoldig'ini ko'rish
+// shop.sotish('olma', 4); // 4kg olma sotish
+// shop.qabul('gilos', 3); // 3kg gilos qabul qilish
+// shop.qoldiq(); // Yangi qoldiqni ko'rish
+
+
+// E-TASK: 
+
+// Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+// MASALAN: getReverse("hello") return qilsin "olleh"
+
+function reverseString(stringuzbek){
+    const StringNomi = stringuzbek.split("").reduce((acc, char) => char + acc, "");
+    console.log(StringNomi);
 }
+reverseString("GeeksforGeeks");
+reverseString("JavaScript");
+reverseString("TypeScript");
 
-// Klassdan foydalanish
-const shop = new Shop(10, 15, 7); // 10kg olma, 15kg banan, 7kg gilos bilan shop yaratildi
 
-shop.qoldiq(); // Mahsulotlar qoldig'ini ko'rish
-shop.sotish('olma', 4); // 4kg olma sotish
-shop.qabul('gilos', 3); // 3kg gilos qabul qilish
-shop.qoldiq(); // Yangi qoldiqni ko'rish
+
