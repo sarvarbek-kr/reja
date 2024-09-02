@@ -209,13 +209,45 @@
 // Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
 // MASALAN: getReverse("hello") return qilsin "olleh"
 
-function reverseString(stringuzbek){
-    const StringNomi = stringuzbek.split("").reduce((acc, char) => char + acc, "");
-    console.log(StringNomi);
+// function reverseString(stringuzbek){
+//     const StringNomi = stringuzbek.split("").reduce((acc, char) => char + acc, "");
+//     console.log(StringNomi);
+// }
+// reverseString("GeeksforGeeks");
+// reverseString("JavaScript");
+// reverseString("TypeScript");
+
+
+//   29.08.2024
+// F-TASK: 
+
+// Shunday findDoublers function tuzing, unga faqat bitta string argument pass bolib, agar stringda bir hil harf qatnashgan bolsa true, 
+// qatnashmasa false qaytarishi kerak.
+
+// MASALAN: getReverse("hello") return true return qiladi.
+
+
+function findDoublers(s) {
+    // Har bir harfni tekshirish uchun setdan foydalanamiz
+    let seen = new Set();
+
+    for (let char of s) {
+        if (seen.has(char)) {
+            return true; // Agar harf allaqachon mavjud bo'lsa, true qaytaramiz
+        }
+        seen.add(char); // Harfni setga qo'shamiz
+    }
+
+    return false; // Agar bir xil harf topilmasa, false qaytariladi
 }
-reverseString("GeeksforGeeks");
-reverseString("JavaScript");
-reverseString("TypeScript");
+
+// Test qilish
+console.log(findDoublers("hello"));  // true
+console.log(findDoublers("world"));  // false
+console.log(findDoublers("abcde"));  // false
+console.log(findDoublers("aabbcc")); // true
+
+
 
 
 
